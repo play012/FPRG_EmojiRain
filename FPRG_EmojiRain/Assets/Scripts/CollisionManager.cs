@@ -7,12 +7,14 @@ public class CollisionManager : MonoBehaviour
 {
     public int hitCounter;
 
+    [SerializeField] CloudManager cloudManager;
     [SerializeField] Texture emojiTexture;
     [SerializeField] GameObject[] hearts;
     [SerializeField] GameObject cloudGO, buttonGO;
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Emoji") {
+            cloudManager.lastEmoji = "";
             RawImage emojiImg = other.transform.GetChild(0).gameObject.GetComponent<RawImage>();
             emojiImg.texture = emojiTexture;
             hearts[hitCounter].SetActive(false);

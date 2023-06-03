@@ -1,0 +1,55 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class JavascriptHook : MonoBehaviour
+{
+    [SerializeField] CloudManager cloudManager;
+    [SerializeField] Scoreboard scoreBoard;
+    [SerializeField] Texture scoreTexture;
+
+    string currentEmotion;
+    bool startTimer;
+    int textureTimer;
+
+    public void EmotionRecog(string data) {
+        currentEmotion = data;
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        currentEmotion = "";
+        textureTimer = 0;
+        startTimer = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(currentEmotion == cloudManager.lastEmoji && currentEmotion != "") {
+            scoreBoard.currentScore++;
+            cloudManager.lastEmoji = "";
+            currentEmotion = "";
+            startTimer = true;
+
+            var clones = GameObject.FindGameObjectsWithTag("Emoji");
+            foreach (var clone in clones) {
+                clone.GetComponent<RawImage>().texture = scoreTexture;
+            }
+        }
+
+        if(startTimer) {
+            textureTimer++;
+            if(textureTimer == 60) {
+                var clones = GameObject.FindGameObjectsWithTag("Emoji");
+                foreach (var clone in clones) {
+                    Destroy(clone);
+                }
+                textureTimer = 0;
+                startTimer = false;
+            }
+        }
+    }
+}

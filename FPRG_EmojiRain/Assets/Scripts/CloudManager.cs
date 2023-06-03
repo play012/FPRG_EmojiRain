@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CloudManager : MonoBehaviour
 {
+    public string lastEmoji;
+
     [SerializeField] GameObject[] emojis;
     [SerializeField] GameObject canvasGO;
     [SerializeField] CollisionManager collManager;
@@ -34,14 +36,11 @@ public class CloudManager : MonoBehaviour
 
             if(transform.position.x >= 0.001f && !emojisSpawned) {
                 emojisSpawned = true;
-                //int emojiCount = Random.Range(1, 4);
-                int emojiCount = 1;
-                for(int i = 0; i < emojiCount; i++) {
-                    int randEmoji = Random.Range(0, emojis.Length);
-                    float randPos = Random.Range(-250f, 250f);
-                    GameObject emojiInst = Instantiate(emojis[randEmoji], new Vector3(randPos, 280f, 0f), Quaternion.identity);
-                    emojiInst.transform.SetParent(canvasGO.transform, false);
-                }
+                int randEmoji = Random.Range(0, emojis.Length);
+                float randPos = Random.Range(-250f, 250f);
+                lastEmoji = emojis[randEmoji].name;
+                GameObject emojiInst = Instantiate(emojis[randEmoji], new Vector3(randPos, 280f, 0f), Quaternion.identity);
+                emojiInst.transform.SetParent(canvasGO.transform, false);
             }
         }
     }

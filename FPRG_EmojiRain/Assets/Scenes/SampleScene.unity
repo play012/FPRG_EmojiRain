@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 67775801}
   - component: {fileID: 67775803}
   - component: {fileID: 67775802}
+  - component: {fileID: 67775804}
   m_Layer: 5
   m_Name: Scoreboard
   m_TagString: Untagged
@@ -286,6 +287,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67775800}
   m_CullTransparentMesh: 1
+--- !u!114 &67775804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67775800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d1172808c7784b4cb8da20e697e042f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScore: 0
+  scoreText: {fileID: 592923193}
+  highscoreText: {fileID: 383754362}
 --- !u!1 &77026165
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,6 +954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848fe805a7fc04bfd9f5ae0ef3efafa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastEmoji: 
   emojis:
   - {fileID: 6236215178247193101, guid: d93dd0454c54f42daa755b1a2999a7ce, type: 3}
   - {fileID: 3528767988622419873, guid: 50cec250d19f842758f0fa3ed6c5b54c, type: 3}
@@ -1217,6 +1234,53 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &480141918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 480141920}
+  - component: {fileID: 480141919}
+  m_Layer: 0
+  m_Name: JavascriptHook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &480141919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480141918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 216816bb8ea9d4b1ebc2ce1331c4d232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudManager: {fileID: 301450946}
+  scoreBoard: {fileID: 67775804}
+  scoreTexture: {fileID: 2800000, guid: d5fe48ad6b1764d4abe1428f767f7153, type: 3}
+--- !u!4 &480141920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480141918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &506729741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,6 +1839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitCounter: 0
+  cloudManager: {fileID: 0}
   emojiTexture: {fileID: 2800000, guid: 9965330aaefb1480cb966fc76da9df23, type: 3}
   hearts:
   - {fileID: 26289050}
