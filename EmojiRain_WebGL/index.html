@@ -41,6 +41,8 @@
 </head>
 
 <body>
+	<script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"> </script>
+	<script src="EmojiRain_ONNX.js"></script>
 	<div id="gameContainer">
 		<canvas id="unity-canvas" data-pixel-art=""></canvas>
 		<script src="Build/EmojiRain_WebGL.loader.js"></script>
@@ -94,6 +96,12 @@
 			createUnityInstance(canvas, config, progressHandler).then(function (instance) {
 				canvas = instance.Module.canvas;
 				onResize();
+				setInterval(frame, 16);
+				function frame() {
+					var emotionRecog = localStorage.getItem('emotion');
+					instance.SendMessage('JavascriptHook', 'EmotionRecog', emotionRecog);
+				}
+
 			});
 			window.addEventListener('resize', onResize);
 			onResize();
