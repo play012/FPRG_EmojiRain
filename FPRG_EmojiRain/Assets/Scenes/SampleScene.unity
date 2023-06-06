@@ -955,14 +955,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastEmoji: 
-  emojis:
-  - {fileID: 6236215178247193101, guid: d93dd0454c54f42daa755b1a2999a7ce, type: 3}
-  - {fileID: 3528767988622419873, guid: 50cec250d19f842758f0fa3ed6c5b54c, type: 3}
-  - {fileID: 1135980982134226683, guid: 69dc7f4c2e12e4107bde58bf57bec850, type: 3}
-  - {fileID: 2260480339285563732, guid: acf4235ffe3694dc0a10b804d6991b69, type: 3}
-  - {fileID: 2657494076387386726, guid: 52a1603098b6143b4942e97e281b23d0, type: 3}
-  - {fileID: 7059976862065384981, guid: bd5e0a27817da44509d87125ecc13ecc, type: 3}
   canvasGO: {fileID: 1135204859}
+  emojiGO: {fileID: 2796775087319697595, guid: a1287a9a4aa464d1e855e29ef7a05ac5, type: 3}
   collManager: {fileID: 842062036}
 --- !u!1 &383754360
 GameObject:
@@ -1839,7 +1833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitCounter: 0
-  cloudManager: {fileID: 0}
+  cloudManager: {fileID: 301450946}
   emojiTexture: {fileID: 2800000, guid: 9965330aaefb1480cb966fc76da9df23, type: 3}
   hearts:
   - {fileID: 26289050}

@@ -17,6 +17,8 @@ public class CollisionManager : MonoBehaviour
             cloudManager.lastEmoji = "";
             RawImage emojiImg = other.transform.GetChild(0).gameObject.GetComponent<RawImage>();
             emojiImg.texture = emojiTexture;
+            var videoPlayer = other.transform.GetChild(0).transform.GetChild(0).GetComponent<UnityEngine.Video.VideoPlayer>();
+            videoPlayer.url = "";
             hearts[hitCounter].SetActive(false);
             hitCounter--;
 
