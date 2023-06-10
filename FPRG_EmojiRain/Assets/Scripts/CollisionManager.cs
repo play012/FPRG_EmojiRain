@@ -8,6 +8,7 @@ public class CollisionManager : MonoBehaviour
     public int hitCounter;
 
     [SerializeField] CloudManager cloudManager;
+    [SerializeField] Scoreboard scoreBoard;
     [SerializeField] Texture emojiTexture;
     [SerializeField] GameObject[] hearts;
     [SerializeField] GameObject cloudGO, buttonGO;
@@ -25,6 +26,7 @@ public class CollisionManager : MonoBehaviour
             if (hitCounter == -1) {
                 cloudGO.transform.position = new Vector3(0f, 3f, -0.1f);
                 buttonGO.SetActive(true);
+                scoreBoard.currentScore = 0;
                 foreach (GameObject heartGO in hearts) {
                     heartGO.SetActive(true);
                 }
