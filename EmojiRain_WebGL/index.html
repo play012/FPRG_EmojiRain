@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 	<title>FPRG_EmojiRain</title>
 	<style>
 		html,
@@ -41,8 +42,9 @@
 </head>
 
 <body>
-	<script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"> </script>
-	<script src="EmojiRain_ONNX.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+	<script src="EmojiRain_TF.js"></script>
 	<div id="gameContainer">
 		<canvas id="unity-canvas" data-pixel-art=""></canvas>
 		<script src="Build/EmojiRain_WebGL.loader.js"></script>
