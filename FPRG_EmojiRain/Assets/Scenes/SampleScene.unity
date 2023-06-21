@@ -1834,6 +1834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCounter: 0
   cloudManager: {fileID: 301450946}
+  scoreBoard: {fileID: 67775804}
   emojiTexture: {fileID: 2800000, guid: 9965330aaefb1480cb966fc76da9df23, type: 3}
   hearts:
   - {fileID: 26289050}

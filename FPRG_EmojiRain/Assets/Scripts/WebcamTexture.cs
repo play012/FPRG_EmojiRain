@@ -15,10 +15,4 @@ public class WebcamTexture : MonoBehaviour
         webcamRawImage.material.mainTexture = webcamT;
         webcamT.Play();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

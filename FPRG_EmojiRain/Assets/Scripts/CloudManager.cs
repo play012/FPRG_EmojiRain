@@ -19,7 +19,7 @@ public class CloudManager : MonoBehaviour
         dir = Vector3.left;
         speed = 3f;
         emojisSpawned = true;
-        emojiList = new string[] {"angry", "astonished", "fearful", "frowning", "nauseated", "smiling"};
+        emojiList = new string[] {"angry", "surprised", "sad", "happy"};
     }
 
     void Update() {
@@ -45,6 +45,7 @@ public class CloudManager : MonoBehaviour
                 videoPlayer.url = Path.Combine(Application.streamingAssetsPath, lastEmoji + ".webm");
                 GameObject emojiInst = Instantiate(emojiGO, new Vector3(randPos, 280f, 0f), Quaternion.identity);
                 emojiInst.transform.SetParent(canvasGO.transform, false);
+                emojiInst.GetComponent<FallingStatus>().isFalling = true;
             }
         }
     }

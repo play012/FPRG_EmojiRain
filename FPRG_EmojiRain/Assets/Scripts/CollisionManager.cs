@@ -15,6 +15,7 @@ public class CollisionManager : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.tag == "Emoji") {
+            other.gameObject.GetComponent<FallingStatus>().isFalling = false;
             cloudManager.lastEmoji = "";
             RawImage emojiImg = other.transform.GetChild(0).gameObject.GetComponent<RawImage>();
             emojiImg.texture = emojiTexture;
@@ -27,6 +28,7 @@ public class CollisionManager : MonoBehaviour
                 cloudGO.transform.position = new Vector3(0f, 3f, -0.1f);
                 buttonGO.SetActive(true);
                 scoreBoard.currentScore = 0;
+                ResetHits();
                 foreach (GameObject heartGO in hearts) {
                     heartGO.SetActive(true);
                 }

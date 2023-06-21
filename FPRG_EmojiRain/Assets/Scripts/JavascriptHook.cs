@@ -36,7 +36,11 @@ public class JavascriptHook : MonoBehaviour
 
             var clones = GameObject.FindGameObjectsWithTag("Emoji");
             foreach (var clone in clones) {
-                clone.GetComponent<RawImage>().texture = scoreTexture;
+                FallingStatus fallingStatus = clone.GetComponent<FallingStatus>();
+                if (fallingStatus.isFalling) {
+                    clone.GetComponent<RawImage>().texture = scoreTexture;
+                    clone.GetComponent<Rigidbody2D>().gravityScale = 0;
+                }
             }
         }
 
@@ -45,7 +49,9 @@ public class JavascriptHook : MonoBehaviour
             if(textureTimer == 60) {
                 var clones = GameObject.FindGameObjectsWithTag("Emoji");
                 foreach (var clone in clones) {
-                    Destroy(clone);
+                    if (clone.GetComponent<RawImage>().texture == scoreTexture) {
+                        Destroy(clone);
+                    }
                 }
                 textureTimer = 0;
                 startTimer = false;
