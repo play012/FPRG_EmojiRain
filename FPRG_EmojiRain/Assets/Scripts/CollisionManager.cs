@@ -28,7 +28,6 @@ public class CollisionManager : MonoBehaviour
                 cloudGO.transform.position = new Vector3(0f, 3f, -0.1f);
                 buttonGO.SetActive(true);
                 scoreBoard.currentScore = 0;
-                ResetHits();
                 foreach (GameObject heartGO in hearts) {
                     heartGO.SetActive(true);
                 }
