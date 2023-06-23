@@ -45,7 +45,6 @@ public class CloudManager : MonoBehaviour
                 videoPlayer.url = Path.Combine(Application.streamingAssetsPath, lastEmoji + ".webm");
                 GameObject emojiInst = Instantiate(emojiGO, new Vector3(randPos, 280f, 0f), Quaternion.identity);
                 emojiInst.transform.SetParent(canvasGO.transform, false);
-                emojiInst.GetComponent<FallingStatus>().isFalling = true;
             }
         }
     }

@@ -8,6 +8,6 @@ public class FallingStatus : MonoBehaviour
 
     void Start()
     {
-        isFalling = false;
+        isFalling = true;
     }
 }

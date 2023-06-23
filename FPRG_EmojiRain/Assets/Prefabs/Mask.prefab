@@ -60,7 +60,7 @@ VideoPlayer:
   m_AudioOutputMode: 2
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
-  m_Url: /Users/stefan/FPRG_EmojiRain/FPRG_EmojiRain/Assets/StreamingAssets/smiling.webm
+  m_Url: /Users/stefan/FPRG_EmojiRain/FPRG_EmojiRain/Assets/StreamingAssets/happy.webm
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0

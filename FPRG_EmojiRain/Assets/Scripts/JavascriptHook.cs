@@ -39,6 +39,7 @@ public class JavascriptHook : MonoBehaviour
                 FallingStatus fallingStatus = clone.GetComponent<FallingStatus>();
                 if (fallingStatus.isFalling) {
                     clone.GetComponent<RawImage>().texture = scoreTexture;
+                    clone.transform.GetChild(0).GetComponent<RawImage>().texture = scoreTexture;
                     clone.GetComponent<Rigidbody2D>().gravityScale = 0;
                 }
             }

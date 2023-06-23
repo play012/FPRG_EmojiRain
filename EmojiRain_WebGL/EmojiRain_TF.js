@@ -4,8 +4,8 @@ init();
 
 // Load the image model and setup the webcam
 async function init() {
-    const modelURL = "https://teachablemachine.withgoogle.com/models/-elKCXN64/model.json";
-    const metadataURL = "https://teachablemachine.withgoogle.com/models/-elKCXN64/metadata.json";
+    const modelURL = "https://teachablemachine.withgoogle.com/models/rdoB4-skr/model.json";
+    const metadataURL = "https://teachablemachine.withgoogle.com/models/rdoB4-skr/metadata.json";
 
     // load the model and metadata
     // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
