@@ -1257,7 +1257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216816bb8ea9d4b1ebc2ce1331c4d232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkCollision: 0
   cloudManager: {fileID: 301450946}
   scoreBoard: {fileID: 67775804}
   scoreTexture: {fileID: 2800000, guid: d5fe48ad6b1764d4abe1428f767f7153, type: 3}
@@ -1835,10 +1834,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitCounter: 0
   cloudManager: {fileID: 301450946}
-  jsHook: {fileID: 480141919}
   scoreBoard: {fileID: 67775804}
   emojiTexture: {fileID: 2800000, guid: 9965330aaefb1480cb966fc76da9df23, type: 3}
-  scoreTexture: {fileID: 2800000, guid: d5fe48ad6b1764d4abe1428f767f7153, type: 3}
   hearts:
   - {fileID: 26289050}
   - {fileID: 77026165}

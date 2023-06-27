@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class JavascriptHook : MonoBehaviour
 {
-    public bool checkCollision;
-
     [SerializeField] CloudManager cloudManager;
     [SerializeField] Scoreboard scoreBoard;
     [SerializeField] Texture scoreTexture;
@@ -25,7 +23,6 @@ public class JavascriptHook : MonoBehaviour
         currentEmotion = "";
         textureTimer = 0;
         startTimer = false;
-        checkCollision = true;
     }
 
     // Update is called once per frame
@@ -36,7 +33,6 @@ public class JavascriptHook : MonoBehaviour
             cloudManager.lastEmoji = "";
             currentEmotion = "";
             startTimer = true;
-            checkCollision = false;
 
             var clones = GameObject.FindGameObjectsWithTag("Emoji");
             foreach (var clone in clones) {
@@ -60,7 +56,6 @@ public class JavascriptHook : MonoBehaviour
                 }
                 textureTimer = 0;
                 startTimer = false;
-                checkCollision = true;
             }
         }
     }
